@@ -1,4 +1,5 @@
 @use '@styles/vars' as v;
+@use '@styles/mixins' as m;
 
 .swapButton {
   display: flex;
@@ -10,8 +11,12 @@
   background: transparent;
   border: none;
   outline: transparent none;
-  border-radius: 50% ;
+  border-radius: 50%;
   transition: 300ms;
+
+  @include m.down-576 {
+    margin: auto;
+  }
 
   &:hover {
     outline: 1px solid v.$border;
