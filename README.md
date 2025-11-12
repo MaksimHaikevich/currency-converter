@@ -113,18 +113,5 @@ src/
 
 ---
 
-## Deployment
-Any static hosting will work (Vercel, Netlify). Example:
+## **Demo**: https://currency-converter-valetax.netlify.app/
 
-```bash
-npm run build
-# deploy the generated dist/ folder
-```
-
-Optionally add a link here:
-- **Demo**: _your deployed URL_
-
----
-
-## License
-MIT (or your preferred license).
