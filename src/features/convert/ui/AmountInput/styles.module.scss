@@ -1,0 +1,32 @@
+@use '@styles/vars' as v;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  .label {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 100%;
+  }
+
+  .amountInput {
+    width: 100%;
+    font-size: 14px;
+    line-height: 100%;
+    border: 1px solid v.$border;
+    border-radius: v.$radius-sm;
+    background: v.$surface;
+    padding: 12px 0;
+    text-align: center;
+
+    &:focus {
+      border-color: #1447E6;
+      outline: 2px solid #DBEAFE;
+      outline-offset: 0;
+    }
+  }
+
+}
+

@@ -1,0 +1,16 @@
+@use '@styles/vars' as v;
+
+.refreshBtn {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  width: 100%;
+  max-width: 110px;
+  padding: 4px 8px;
+  border: 1px solid v.$medium-blue;
+  border-radius: v.$radius-sm;
+  background: v.$light-blue;
+  color: v.$blue;
+}

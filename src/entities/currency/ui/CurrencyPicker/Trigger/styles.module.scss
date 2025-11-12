@@ -1,0 +1,48 @@
+@use '@styles/vars' as v;
+
+.currencySelect {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  background: v.$accent;
+  border: 1px solid v.$border;
+  border-radius: v.$radius-sm;
+  padding: 6px 8px;
+  cursor: pointer;
+  flex: 1;
+
+  .symbol {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid v.$medium-blue;
+    background: v.$light-blue;
+    color: v.$blue;
+    font-size: 12px;
+    line-height: 100%;
+    font-weight: 600;
+  }
+
+  .currencyInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    .code {
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 100%;
+    }
+
+    .name {
+      font-size: 12px;
+      line-height: 100%;
+      color: v.$secondary-text;
+      text-align: left;
+    }
+  }
+}

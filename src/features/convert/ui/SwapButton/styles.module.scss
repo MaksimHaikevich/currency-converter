@@ -1,0 +1,20 @@
+@use '@styles/vars' as v;
+
+.swapButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  outline: transparent none;
+  border-radius: 50% ;
+  transition: 300ms;
+
+  &:hover {
+    outline: 1px solid v.$border;
+    background: v.$surface;
+  }
+}

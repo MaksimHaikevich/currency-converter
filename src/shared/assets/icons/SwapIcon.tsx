@@ -1,0 +1,13 @@
+export const SwapIcon = () => {
+  return (
+    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M2.25 7.125H15.75L11.25 2.625M16.0496 10.875H2.54962L7.04962 15.375"
+        stroke="#0A0A0A"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
+  );
+};

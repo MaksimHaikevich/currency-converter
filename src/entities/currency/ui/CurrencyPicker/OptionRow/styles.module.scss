@@ -1,0 +1,65 @@
+@use '@styles/vars' as v;
+
+.row {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 12px 8px;
+  border-radius: 8px;
+  transition: 300ms;
+
+  &:hover {
+    background: v.$accent;
+  }
+
+  .symbol {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid v.$medium-blue;
+    background: v.$light-blue;
+    color: v.$blue;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 100%;
+  }
+
+  .texts {
+    text-align: left;
+
+    .code {
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 100%;
+    }
+
+    .name {
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 100%;
+      color: v.$secondary-text;
+    }
+  }
+
+  .check {
+    margin-left: auto;
+  }
+}
+
+.selected {
+  background: v.$accent;
+}
+
+.active {
+  background: v.$light-blue
+}
+
+
+

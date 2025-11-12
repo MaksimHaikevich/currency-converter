@@ -1,0 +1,25 @@
+@use '@styles/mixins' as m ;
+
+.currencyWrapper {
+  flex: 1 1;
+  margin: auto;
+
+  @include m.down-576 {
+    margin: initial;
+  }
+}
+
+.container {
+  margin: auto;
+  max-width: 1032px;
+  padding: 24px 16px;
+}
+
+.converter {
+  display: flex;
+  gap: 30px;
+
+  @include m.down-576 {
+    flex-direction: column;
+  }
+}

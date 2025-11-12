@@ -1,0 +1,59 @@
+@use '@styles/vars' as v;
+@use '@styles/mixins' as m;
+
+@import 'normalize.css';
+@import '@fontsource/inter/400.css';
+@import '@fontsource/inter/500.css';
+@import '@fontsource/inter/600.css';
+@import '@fontsource/inter/700.css';
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+#root {
+  display: flex;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: v.$font-sans;
+  font-size: v.$fs-base;
+  font-weight: v.$fs-weight;
+  line-height: v.$lh;
+  color: v.$text;
+  background: v.$bg;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4, h5, h6, p, figure {
+  margin: 0;
+}
+
+ul, ol {
+  margin: 0;
+  padding: 0;
+}
+
+img, picture, svg, video {
+  display: block;
+  max-width: 100%;
+}
+
+button, input, select, textarea {
+  font: inherit;
+  color: inherit;
+}
+
+a {
+  color: v.$accent;
+  text-decoration: none;
+}
+
+

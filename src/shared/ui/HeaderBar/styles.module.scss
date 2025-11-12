@@ -1,0 +1,43 @@
+@use '@styles/vars' as v;
+@use '@styles/mixins' as m;
+
+.head {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+
+  .title {
+    font-weight: 600;
+    line-height: 100%;
+  }
+
+  .subtitle {
+    color: v.$secondary-text;
+    font-size: 14px;
+    line-height: 100%;
+  }
+}
+
+.statuses {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin: 30px 0;
+  font-size: 12px;
+  line-height: 100%;
+
+  @include m.down-576 {
+      flex-direction: column;
+  }
+
+  .updateStatus {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 500;
+    color: v.$secondary-text;
+  }
+}
+

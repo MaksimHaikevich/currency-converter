@@ -1,0 +1,29 @@
+@use '@styles/vars' as v;
+
+.networkStatus {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: default;
+  width: 100%;
+  max-width: 70px;
+  font-size: 12px;
+  line-height: 100%;
+  font-weight: 600;
+  border-radius: v.$radius-sm;
+  border: 1px solid;
+  padding: 4px 8px;
+}
+
+.online {
+  border-color: v.$medium-green;
+  color: v.$green;
+  background: v.$light-green;
+
+}
+
+.offline {
+  border-color: v.$medium-red;
+  color: v.$red;
+  background: v.$light-red;
+}

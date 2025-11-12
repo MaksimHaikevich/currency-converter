@@ -1,0 +1,77 @@
+@use '@styles/vars' as v;
+
+
+.conversionContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 20px;
+  border-radius: v.$radius;
+  border: 1px solid v.$border;
+
+  .title {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 100%;
+  }
+
+  .resultValueContainer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    .converted {
+      font-size: 24px;
+      line-height: 100%;
+      font-weight: 700;
+
+    }
+
+    .amountHint {
+      color: v.$secondary-text;
+      font-size: 12px;
+      line-height: 100%;
+      font-weight: 500;
+    }
+  }
+
+  .devider {
+    width: 100%;
+    height: 1px;
+    background: v.$light-gray;
+  }
+
+  .conversionInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    .rateRow {
+      font-size: 12px;
+      line-height: 100%;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .label {
+        color: v.$secondary-text;
+      }
+
+      .value {
+
+      }
+    }
+  }
+
+  .description {
+    font-size: 12px;
+    line-height: 100%;
+    padding: 8px 12px;
+    background: v.$surface;
+    color: v.$secondary-text;
+    text-align: center;
+    border-radius: 12px;
+  }
+}

@@ -1,0 +1,19 @@
+@use '@styles/vars' as v;
+
+.converterForm {
+  width: 100%;
+  height: max-content;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  border: 1px solid v.$border;
+  border-radius: v.$radius;
+
+  .currenciesContainer {
+    display: flex;
+    gap: 12px;
+    align-items: flex-end;
+  }
+}
+
