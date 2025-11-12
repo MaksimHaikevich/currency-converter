@@ -28,9 +28,9 @@ export const ResultCard: React.FC<ResultCardProps> = ({
 }) => {
   const renderConverted = () => {
     if (loading) return <Skeleton width={90} height={24} />;
-    if (error) return <span>—</span>;
-    if (converted !== null) return <span>{formatNumber(converted, to)}</span>;
-    return <span>—</span>;
+    if (error) return <>—</>;
+    if (converted !== null) return <>{formatNumber(converted, to)}</>;
+    return <>—</>;
   };
 
   const renderAmountHint = () => {
