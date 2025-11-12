@@ -1,6 +1,9 @@
 export function sanitizeAmountInput(input: string): string {
   if (!input) return '';
 
+  const MAX_INTEGER_DIGITS = 15;
+  const MAX_FRACTION_DIGITS = 10;
+
   const whitelisted = input.replace(/[^\d.,]/g, '');
 
   let result = '';
@@ -11,6 +14,7 @@ export function sanitizeAmountInput(input: string): string {
       result += char;
       continue;
     }
+
     if ((char === '.' || char === ',') && chosenSeparator === null) {
       chosenSeparator = char;
       result += char;
@@ -21,7 +25,26 @@ export function sanitizeAmountInput(input: string): string {
     result = '0' + result;
   }
 
-  return result;
+  if (!result) return '';
+
+  if (!chosenSeparator) {
+    return result.slice(0, MAX_INTEGER_DIGITS);
+  }
+
+  const endsWithSeparator = result.endsWith(chosenSeparator);
+
+  const [intRaw, fracRaw = ''] = result.split(chosenSeparator);
+
+  const intLimited = intRaw.slice(0, MAX_INTEGER_DIGITS);
+  const fracLimited = fracRaw.slice(0, MAX_FRACTION_DIGITS);
+
+  if (fracLimited.length > 0) {
+    return `${intLimited}${chosenSeparator}${fracLimited}`;
+  }
+
+  return endsWithSeparator && MAX_FRACTION_DIGITS > 0
+    ? `${intLimited}${chosenSeparator}`
+    : intLimited;
 }
 
 export function toNumberSafe(input: string | number | null | undefined): number {
